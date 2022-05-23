@@ -45,6 +45,7 @@
                 <tr>
                   <th>村莊名稱</th>
                   <th>音樂</th>
+                  <th>複製</th>
                 </tr>
               </thead>
               <tbody v-for="music in musics">
@@ -52,6 +53,9 @@
                   <td class="s4">{{ music.name }}</td>
                   <td class="s8">
                     <audio controls="controls" preload="none"><source src="{{ music.url }}"></source></audio>
+                  </td>
+                  <td>
+                    <button style="font-size:24px" @click="copy(music)"><i class="fa fa-copy"></i></button>
                   </td>
                 </tr>
               </tbody>
@@ -79,6 +83,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="js/bgm.js"></script>
 </body>
 </html>
